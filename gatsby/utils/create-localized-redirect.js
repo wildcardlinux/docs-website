@@ -13,6 +13,7 @@ const createLocalizedRedirect = ({
     toPath,
     isPermanent,
     redirectInBrowser,
+    statusCode: 200,
   });
 
   locales.forEach((locale) => {
@@ -21,6 +22,7 @@ const createLocalizedRedirect = ({
       toPath: path.join(`/${locale}`, toPath),
       isPermanent,
       redirectInBrowser,
+      statusCode: 200,
     });
   });
 };

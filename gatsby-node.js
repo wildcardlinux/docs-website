@@ -190,6 +190,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         toPath: url,
         isPermanent: true,
         redirectInBrowser: true,
+        statusCode: 200,
       });
     });
   });
@@ -348,6 +349,7 @@ const createLocalizedRedirect = ({
     toPath: appendTrailingSlash(toPath),
     isPermanent,
     redirectInBrowser,
+    statusCode: 200,
   });
 
   createRedirect({
@@ -355,6 +357,7 @@ const createLocalizedRedirect = ({
     toPath: appendTrailingSlash(toPath),
     isPermanent,
     redirectInBrowser,
+    statusCode: 200,
   });
 
   locales.forEach((locale) => {
@@ -363,12 +366,14 @@ const createLocalizedRedirect = ({
       toPath: appendTrailingSlash(path.join(`/${locale}`, toPath)),
       isPermanent,
       redirectInBrowser,
+      statusCode: 200,
     });
     createRedirect({
       fromPath: path.join(`/${locale}`, pathWithoutTrailingSlash),
       toPath: appendTrailingSlash(path.join(`/${locale}`, toPath)),
       isPermanent,
       redirectInBrowser,
+      statusCode: 200,
     });
   });
 };

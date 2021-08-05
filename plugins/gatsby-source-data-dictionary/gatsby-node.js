@@ -112,6 +112,7 @@ exports.sourceNodes = (
             isPermanent: true,
             redirectInBrowser: true,
             trailingSlash: false,
+            statusCode: 200,
           });
         });
 
@@ -124,6 +125,7 @@ exports.sourceNodes = (
       isPermanent: true,
       redirectInBrowser: true,
       trailingSlash: false,
+      statusCode: 200,
     });
 
     createNode({
