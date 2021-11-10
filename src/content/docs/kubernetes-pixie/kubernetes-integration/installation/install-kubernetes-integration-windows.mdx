@@ -71,12 +71,9 @@ You can install the Kubernetes integration for Windows using Helm. See an exampl
    enableLinux: false
    enableWindows: true
    windowsOsList:
-     - version: 1809
-       imageTag: 2.2.0-windows-1809-alpha
-       buildNumber: 10.0.17763
-     - version: 2004
-       imageTag: 2.2.0-windows-2004-alpha
-       buildNumber: 10.0.19041
+  - version: 1809
+    imageTagSuffix: windows-ltsc-2019
+    buildNumber: 10.0.17763
    ```
 3. Install the integration with:
 
