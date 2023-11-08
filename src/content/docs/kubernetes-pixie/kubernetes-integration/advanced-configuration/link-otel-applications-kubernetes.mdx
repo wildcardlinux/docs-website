@@ -151,9 +151,10 @@ First, add an OTLP exporter to your [OpenTelemetry Collector configuration YAML 
 
 ```yaml
 exporters:
-  otlp:
-    endpoint: $OTEL_EXPORTER_OTLP_ENDPOINT
-  headers: api-key: $NEW_RELIC_API_KEY
+  otlp/newrelic:
+    endpoint: ${NEWRELIC_OTLP_ENDPOINT}
+    headers:
+      api-key: ${NEWRELIC_LICENSE_KEY}
 ```
 
 ### Step 2: Configure the batch processor [#batch]
